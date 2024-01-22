@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
 import {useState} from "react";
 
-export const Blinds = () => {
+export const Blinds = ({blindsData}) => {
 
-    const [blinds, setBlinds] = useState('blinds-open')
+    const isBlindsOpen = blindsData.isOpen ? 'blinds-open' : 'blinds-closed'
+
+    const [blinds, setBlinds] = useState(isBlindsOpen)
 
     const openBlinds = () => {
         setBlinds('blinds-open')
@@ -29,3 +32,9 @@ export const Blinds = () => {
         </div>
     )
 }
+
+Blinds.propTypes = {
+    blindsData: PropTypes.shape({
+        isOpen: PropTypes.bool.isRequired
+    }).isRequired
+};

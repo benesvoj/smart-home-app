@@ -1,13 +1,22 @@
 import PropTypes from "prop-types";
+import {Light} from "./Light.jsx";
 
-export const Lights = ({children}) => {
+export const Lights = ({lightsData}) => {
     return (
         <div className="lights">
-            {children}
+            {lightsData.map((light, index) => {
+                return (
+                    <Light
+                        key={index}
+                        isOn={light.lightState}
+                        placeName={light.lightTitle}
+                    />
+                )
+            })}
         </div>
     )
 }
 
 Lights.propTypes = {
-    children: PropTypes.node
+    lightsData: PropTypes.array.isRequired
 }

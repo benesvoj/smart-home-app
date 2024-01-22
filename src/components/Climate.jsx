@@ -1,7 +1,7 @@
 import {useState} from "react";
-import {climateData} from "../utils/data.js";
+import PropTypes from "prop-types";
 
-export const Climate = () => {
+export const Climate = ({climateData}) => {
     const initialTemperature = climateData.filter(item => item.type === "temperature")[0].value
     const initialHumidity = climateData.filter(item => item.type === "humidity")[0].value
 
@@ -33,3 +33,10 @@ export const Climate = () => {
         </div>
     )
 }
+
+Climate.propTypes = {
+    climateData: PropTypes.arrayOf(PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired
+    }))
+};
