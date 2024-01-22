@@ -5,7 +5,12 @@ export const Energy = ({energyData}) => {
     return (
         <div className="energy">
             {energyData.map((item, index) => (
-                    <EnergySource key={index} image={item.imageSrc} description={item.description} type={item.type} value={item.value} />
+                    <EnergySource
+                        key={index}
+                        image={item.imageSrc}
+                        description={item.description}
+                        type={item.type}
+                        value={item.value}/>
                 )
             )}
         </div>
