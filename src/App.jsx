@@ -9,22 +9,27 @@ import {Energy} from "./components/Energy.jsx";
 function App() {
 
   return (
-    <Dashboard>
-        <Lights>
-            {lightsData.map((light, index) => {
-                return (
-                    <Light
-                        key={index}
-                        isOn={light.lightState}
-                        placeName={light.lightTitle}
-                    />
-                )
-            })}
-        </Lights>
-        <Climate />
-        <Blinds />
-        <Energy />
-    </Dashboard>
+      <div className="container">
+          <header className="header">
+              <h1 className="header__title">Chytrý dům</h1>
+          </header>
+          <Dashboard>
+              <Lights>
+                  {lightsData.map((light, index) => {
+                      return (
+                          <Light
+                              key={index}
+                              isOn={light.lightState}
+                              placeName={light.lightTitle}
+                          />
+                      )
+                  })}
+              </Lights>
+              <Climate/>
+              <Blinds/>
+              <Energy/>
+          </Dashboard>
+      </div>
   )
 }
 
