@@ -1,8 +1,13 @@
-# React + Vite
+# Smart Home App (Chytrý dům)
+The application developed for the subject of CodersLab study. The application is designed to control the smart home system. The application is written in React.js and uses the Vite.js framework. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project setup
+```
+npm install
+```
 
-Currently, two official plugins are available:
+### Compiles and hot-reloads for development
+```
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
